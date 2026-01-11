@@ -20,7 +20,7 @@ export default function Footer() {
             transition={{ delay: 0.1 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-2xl font-bold text-red-500 mb-4">
+            <h3 className="text-2xl font-bold text-red-600 mb-4">
               Frobel Academy
             </h3>
             <p className="text-gray-400">Shaping minds, building futures.</p>
@@ -37,7 +37,7 @@ export default function Footer() {
               {["About Us", "Academics", "Admissions", "Events"].map(link => (
                 <li
                   key={link}
-                  className="hover:text-red-500 cursor-pointer transition-colors"
+                  className="hover:text-red-600 cursor-pointer transition-colors"
                 >
                   {link}
                 </li>
@@ -57,7 +57,7 @@ export default function Footer() {
                 link => (
                   <li
                     key={link}
-                    className="hover:text-red-500 cursor-pointer transition-colors"
+                    className="hover:text-red-600 cursor-pointer transition-colors"
                   >
                     {link}
                   </li>
@@ -73,15 +73,15 @@ export default function Footer() {
             viewport={{ once: true }}
             className="space-y-3"
           >
-            <div className="flex items-center gap-3 text-gray-400 hover:text-red-500 cursor-pointer transition-colors">
+            <div className="flex items-center gap-3 text-gray-400 hover:text-red-600 cursor-pointer transition-colors">
               <Phone className="w-5 h-5" />
               <span>+1 (555) 123-4567</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-400 hover:text-red-500 cursor-pointer transition-colors">
+            <div className="flex items-center gap-3 text-gray-400 hover:text-red-600 cursor-pointer transition-colors">
               <Mail className="w-5 h-5" />
               <span>info@frobelacademy.edu</span>
             </div>
-            <div className="flex items-center gap-3 text-gray-400 hover:text-red-500 cursor-pointer transition-colors">
+            <div className="flex items-center gap-3 text-gray-400 hover:text-red-600 cursor-pointer transition-colors">
               <MapPin className="w-5 h-5" />
               <span>123 Education Lane</span>
             </div>

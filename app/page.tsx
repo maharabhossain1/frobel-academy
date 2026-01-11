@@ -8,6 +8,7 @@ import ProposedModules from "@/components/proposed-modules";
 import CoCurricularActivities from "@/components/co-curricular-activities";
 import CTA from "@/components/cta";
 import Footer from "@/components/footer";
+import AcademicCurriculumSection from "@/components/Academiccurriculum";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
       <Header />
       <Hero />
       <Features />
-      {/* <CurrentModules /> */}
+      <AcademicCurriculumSection />
+      <CurrentModules />
       {/* <ProposedModules /> */}
-      {/* <CoCurricularActivities /> */}
+      <CoCurricularActivities />
       {/* <CTA /> */}
       {/* <Footer /> */}
     </div>

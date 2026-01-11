@@ -71,7 +71,7 @@ export default function ProposedModules() {
                 whileHover={{ scale: 1.2, rotate: 360 }}
                 transition={{ duration: 0.4 }}
               >
-                <CheckCircle2 className="w-6 h-6 text-red-500 flex-shrink-0 mt-1 group-hover:text-red-400" />
+                <CheckCircle2 className="w-6 h-6 text-red-600 flex-shrink-0 mt-1 group-hover:text-red-400" />
               </motion.div>
               <p className="text-white font-medium group-hover:text-red-400 transition-colors">
                 {item}

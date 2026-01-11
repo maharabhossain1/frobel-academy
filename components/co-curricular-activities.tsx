@@ -159,7 +159,7 @@ const ActivityCard = ({
             className="relative overflow-hidden px-6 py-2 rounded-lg bg-gradient-to-r from-red-600 to-red-700 text-white font-semibold text-sm group/btn"
           >
             <motion.span
-              className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600"
+              className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-600"
               initial={{ x: "-100%" }}
               whileHover={{ x: 0 }}
               transition={{ duration: 0.3 }}

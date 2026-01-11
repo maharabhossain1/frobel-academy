@@ -46,7 +46,7 @@ export default function CTA() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="border-2 border-red-600 text-red-500 px-8 py-3 rounded-lg font-semibold hover:bg-red-900/20 transition-colors"
+            className="border-2 border-red-600 text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-red-900/20 transition-colors"
           >
             Contact Us
           </motion.button>

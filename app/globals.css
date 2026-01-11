@@ -49,6 +49,7 @@
   --color-red-800: #bb2525;
   --color-red-900: #370706;
   --color-red-950: #1b0303;
+  --color-gray-900: rgb(46 46 46);
 }
 
 .dark {
