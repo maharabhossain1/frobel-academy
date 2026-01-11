@@ -41,24 +41,40 @@ const features = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1,
+      delayChildren: 0.1,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut" as const,
+    },
+  },
+};
+
 export default function WhyFrobel() {
   return (
     <section className="relative overflow-hidden bg-[#FAFAFA] px-4 py-16 sm:px-6 md:py-24 lg:px-8">
       <div className="relative mx-auto max-w-7xl">
         {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between"
-        >
+        <div className="mb-12 flex flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
           <div>
             <span className="mb-4 inline-flex items-center gap-2 rounded-full border border-red-200 bg-red-50 px-4 py-1.5 text-sm font-medium text-red-700">
               <span className="size-1.5 rounded-full bg-red-600" />
               Why Frobel Academy
             </span>
-            <div className="flex justify-center gap-6 items-start">
+            <div className="flex items-start justify-center gap-6">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 md:text-4xl lg:text-5xl">
                 Excellence Across
                 <br />
@@ -73,10 +89,16 @@ export default function WhyFrobel() {
             Discover what makes us the premier choice for your child&apos;s
             education journey.
           </p>
-        </motion.div>
+        </div>
 
         {/* Bento Grid */}
-        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
+        <motion.div
+          variants={containerVariants}
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          className="grid gap-4 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2"
+        >
           {features.map((feature, idx) => {
             const Icon = feature.icon;
             const isLarge = feature.size === "large";
@@ -84,11 +106,8 @@ export default function WhyFrobel() {
             return (
               <motion.div
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                viewport={{ once: true }}
-                className={`group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 transition-all duration-300 ${
+                variants={itemVariants}
+                className={`group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 transition-shadow duration-300 hover:shadow-lg ${
                   isLarge
                     ? "lg:col-span-2 lg:row-span-2"
                     : idx === 3
@@ -97,7 +116,7 @@ export default function WhyFrobel() {
                 }`}
               >
                 {/* Background Number */}
-                <div className="pointer-events-none absolute -right-2 -bottom-4 select-none text-[120px] font-bold leading-none text-gray-100 transition-colors duration-300 group-hover:text-red-50 lg:text-[180px]">
+                <div className="pointer-events-none absolute -bottom-4 -right-2 select-none text-[120px] font-bold leading-none text-gray-100 transition-colors duration-300 group-hover:text-red-50 lg:text-[180px]">
                   {String(idx + 1).padStart(2, "0")}
                 </div>
 
@@ -113,7 +132,7 @@ export default function WhyFrobel() {
                   {/* Top Section */}
                   <div>
                     {/* Icon */}
-                    <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl bg-gray-100 text-gray-600 transition-all duration-300   ">
+                    <div className="mb-4 inline-flex size-12 items-center justify-center rounded-xl bg-gray-100 text-gray-600">
                       <Icon className="size-6" strokeWidth={1.5} />
                     </div>
 
@@ -134,7 +153,7 @@ export default function WhyFrobel() {
                     </p>
                   </div>
 
-                  {/* Bottom Section - Stats & Link */}
+                  {/* Bottom Section - Stats */}
                   <div
                     className={`flex items-end justify-between ${
                       isLarge ? "mt-8" : "mt-4"
@@ -158,7 +177,7 @@ export default function WhyFrobel() {
               </motion.div>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

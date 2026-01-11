@@ -182,11 +182,12 @@ export default function Header() {
             <NavigationMenuList className="gap-1">
               {/* Home */}
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Home
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/">Home</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* About Us Dropdown */}
@@ -251,11 +252,12 @@ export default function Header() {
 
               {/* Events */}
               <NavigationMenuItem>
-                <Link href="/events" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Events
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/events">Events</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
 
               {/* Portal Dropdown */}
@@ -280,11 +282,12 @@ export default function Header() {
 
               {/* Contact */}
               <NavigationMenuItem>
-                <Link href="/contact" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                    Contact
-                  </NavigationMenuLink>
-                </Link>
+                <NavigationMenuLink
+                  asChild
+                  className={navigationMenuTriggerStyle()}
+                >
+                  <Link href="/contact">Contact</Link>
+                </NavigationMenuLink>
               </NavigationMenuItem>
             </NavigationMenuList>
           </NavigationMenu>

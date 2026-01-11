@@ -1,5 +1,3 @@
-"use client";
-
 import { VideoBackground } from "./video-background";
 import { HeroOverlay } from "./hero-overlay";
 import { HeroContent } from "./hero-content";
