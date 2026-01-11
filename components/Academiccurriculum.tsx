@@ -110,7 +110,7 @@ export default function AcademicCurriculumSection() {
               className="group relative overflow-hidden rounded-2xl border border-gray-100 bg-gray-50/50 p-6 transition-all hover:border-gray-200 hover:bg-white hover:shadow-lg hover:shadow-gray-100"
             >
               {/* Icon */}
-              <div className="mb-5 inline-flex size-12 items-center justify-center rounded-xl bg-gradient-to-br from-red-600 to-red-600 text-white shadow-md shadow-red-200 transition-transform group-hover:scale-110">
+              <div className="mb-5 inline-flex size-12 items-center justify-center rounded-xl text-red-300 bg-red-50 border border-red-300 transition-transform group-hover:scale-110">
                 <program.icon className="size-5" strokeWidth={1.5} />
               </div>
 
@@ -170,7 +170,7 @@ export default function AcademicCurriculumSection() {
             ))}
           </div>
 
-          <Button className="rounded-full bg-red-600 font-medium text-white hover:bg-red-700 hover:shadow-lg hover:shadow-red-200">
+          <Button className="rounded-full bg-red-600 font-medium text-white hover:bg-red-800 ">
             Explore Programs
             <ArrowRight className="ml-2 size-4" />
           </Button>

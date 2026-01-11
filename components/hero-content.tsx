@@ -68,7 +68,7 @@ export function HeroContent() {
       >
         <Button
           size="lg"
-          className="group h-12 rounded-full bg-red-600 px-8 font-semibold text-white transition-all hover:bg-red-700 hover:shadow-lg hover:shadow-red-600/25"
+          className="group h-12 rounded-full bg-red-600 px-8 font-semibold text-white transition-all hover:bg-red-800 hover:shadow-lg hover:shadow-red-600/25"
         >
           Get Admission
           <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />

@@ -38,7 +38,7 @@ export default function CTA() {
           <motion.button
             whileHover={{ scale: 1.05, gap: "12px" }}
             whileTap={{ scale: 0.95 }}
-            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors flex items-center gap-2"
+            className="bg-red-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-800 transition-colors flex items-center gap-2"
           >
             Start Admission
             <ArrowRight className="w-5 h-5" />
