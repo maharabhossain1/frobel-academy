@@ -37,6 +37,7 @@ export function HeroContent() {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
         className="mb-6"
+        style={{ textShadow: "0 2px 20px rgba(0,0,0,0.3)" }}
       >
         <LayoutTextFlip
           text="Experience "
@@ -54,7 +55,8 @@ export function HeroContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.4 }}
-        className="mb-10 max-w-lg text-lg leading-relaxed text-gray-300 md:text-xl"
+        className="mb-10 max-w-lg text-lg leading-relaxed text-white/90"
+        style={{ textShadow: "0 1px 10px rgba(0,0,0,0.3)" }}
       >
         Excellence in Education, Innovation in Learning. Discover world-class
         academics and transformative experiences.
@@ -65,22 +67,21 @@ export function HeroContent() {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.5 }}
-        className="mb-16 flex flex-wrap items-center gap-4"
+        className="mb-12 flex flex-wrap items-center gap-4"
       >
         <Button
           size="lg"
-          className="group h-12 rounded-full bg-red-600 px-8 font-semibold text-white transition-all hover:bg-red-800 hover:shadow-lg hover:shadow-red-600/25"
+          className="group h-12 rounded-full bg-red-600 px-8 font-semibold text-white shadow-xl transition-all hover:bg-red-700 hover:shadow-2xl hover:shadow-red-600/40"
         >
           Get Admission
           <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
         </Button>
 
-        {/* Watch Tour Button with Drawer */}
         <VideoTourDrawer>
           <Button
             size="lg"
             variant="outline"
-            className="group h-12 rounded-full border-white/30 bg-white/5 px-6 font-medium text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/10 hover:text-white"
+            className="group h-12 rounded-full border-white/30 bg-white/10 px-6 font-medium text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/20 hover:text-white"
           >
             <span className="mr-2 flex size-8 items-center justify-center rounded-full bg-white/20 transition-colors group-hover:bg-red-600">
               <Play className="size-3 fill-white text-white" />
@@ -102,9 +103,9 @@ export function HeroContent() {
           initial={{ scaleX: 0, originX: 0 }}
           animate={{ scaleX: 1 }}
           transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
-          className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-red-600 to-red-600/0"
+          className="absolute inset-y-0 left-0 w-1/3 bg-gradient-to-r from-red-500 to-red-500/0"
         />
-        <div className="absolute -top-1 left-0 size-2 rounded-full bg-red-600" />
+        <div className="absolute -top-1 left-0 size-2 rounded-full bg-red-500" />
       </motion.div>
 
       {/* Stats */}
@@ -120,11 +121,12 @@ export function HeroContent() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 + idx * 0.1 }}
+            style={{ textShadow: "0 2px 10px rgba(0,0,0,0.3)" }}
           >
             <p className="text-3xl font-bold text-white md:text-4xl">
               {stat.value}
             </p>
-            <p className="text-xs font-medium uppercase tracking-wider text-gray-400">
+            <p className="text-xs font-medium uppercase tracking-wider text-white/70">
               {stat.label}
             </p>
           </motion.div>

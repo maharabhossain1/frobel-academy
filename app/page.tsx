@@ -9,6 +9,7 @@ import Footer from "@/components/footer";
 import AcademicCurriculumSection from "@/components/Academiccurriculum";
 import NewsAndCSR from "@/components/NewsAndCSR";
 import WhyFrobel from "@/components/features";
+import GetInTouch from "@/components/GetInTouch";
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
 
       {/* <CoCurricularActivities /> */}
       {/* <CTA /> */}
+      <GetInTouch />
       <Footer />
     </div>
   );

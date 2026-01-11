@@ -107,7 +107,7 @@ export default function WhyFrobel() {
               <motion.div
                 key={idx}
                 variants={itemVariants}
-                className={`group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 transition-shadow duration-300 hover:shadow-lg ${
+                className={`group relative overflow-hidden rounded-3xl border border-gray-200 bg-white p-6 transition-color duration-300 ${
                   isLarge
                     ? "lg:col-span-2 lg:row-span-2"
                     : idx === 3

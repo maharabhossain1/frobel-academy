@@ -21,6 +21,7 @@ import {
 } from "@/components/ui/drawer";
 import { cn } from "@/lib/utils";
 import { DialogTitle } from "@radix-ui/react-dialog";
+import DashedCurve from "./DashedCurve";
 
 const videoCategories = [
   {
