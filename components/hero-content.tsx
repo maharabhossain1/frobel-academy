@@ -4,6 +4,7 @@ import { motion } from "motion/react";
 import { ArrowRight, Play } from "lucide-react";
 import { LayoutTextFlip } from "@/components/ui/layout-text-flip";
 import { Button } from "@/components/ui/button";
+import { VideoTourDrawer } from "./VideoTourDrawer";
 
 const stats = [
   { value: "25+", label: "Years of Excellence" },
@@ -74,16 +75,19 @@ export function HeroContent() {
           <ArrowRight className="ml-2 size-4 transition-transform group-hover:translate-x-1" />
         </Button>
 
-        <Button
-          size="lg"
-          variant="outline"
-          className="group h-12 rounded-full border-white/30 bg-white/5 px-6 font-medium text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/10"
-        >
-          <span className="mr-2 flex size-8 items-center justify-center rounded-full bg-white/20">
-            <Play className="size-3 fill-white text-white" />
-          </span>
-          Watch Tour
-        </Button>
+        {/* Watch Tour Button with Drawer */}
+        <VideoTourDrawer>
+          <Button
+            size="lg"
+            variant="outline"
+            className="group h-12 rounded-full border-white/30 bg-white/5 px-6 font-medium text-white backdrop-blur-sm transition-all hover:border-white/50 hover:bg-white/10 hover:text-white"
+          >
+            <span className="mr-2 flex size-8 items-center justify-center rounded-full bg-white/20 transition-colors group-hover:bg-red-600">
+              <Play className="size-3 fill-white text-white" />
+            </span>
+            Watch Tour
+          </Button>
+        </VideoTourDrawer>
       </motion.div>
 
       {/* Animated Divider Line */}
